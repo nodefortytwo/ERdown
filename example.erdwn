@@ -1,0 +1,21 @@
+#Project Title
+
+
+/*
+ System system_1 contains table table_one which has an id
+ */
+system_1
+	table_one
+		id int
+
+/*
+System system_2 contains table table_1 and table_2, table_2 stores the id from the system_1 system's table_one table
+ */
+system_2
+	table_1
+		id int
+		table_one_id int => system_1.table_one.id
+
+	table_2
+		id int
+		table_1_id int => table_1.id //assumes same system_2 system
